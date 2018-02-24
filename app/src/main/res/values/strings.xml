@@ -4,5 +4,7 @@
     <string name="about">About</string>
     <string name="ppl">PPL (Push, Pull, Legs)</string>
     <string name="workout_Categories">Workout Categories</string>
-
+    <string name="pushA">Push A</string>
+    <string name="pullA">Pull A</string>
+    <string name="legsA">legs A</string>
 </resources>

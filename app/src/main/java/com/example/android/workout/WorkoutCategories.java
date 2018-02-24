@@ -7,6 +7,6 @@ package com.example.android.workout;
 public class WorkoutCategories {
 
     public static String[] getWorkoutCategories() {
-        return new String [] {"Legs", "Back", "Arms", "Chest"};
+        return new String [] {"PPLExercises", "Back", "Arms", "Chest"};
     }
 }

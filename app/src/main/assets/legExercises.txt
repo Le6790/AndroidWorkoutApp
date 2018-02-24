@@ -1,0 +1,4 @@
+Exercise, Sets, Reps, Rest
+Back squats, 5, 8, 60
+Good Mornings, 3, 12, 60
+

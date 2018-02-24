@@ -20,7 +20,9 @@
         <activity android:name=".DisplayWorkoutCategories" />
         <activity android:name=".DisplayPPLProgram" />
         <activity android:name=".DisplayAbout" />
-        <activity android:name=".DisplayAboutPPL"></activity>
+        <activity android:name=".DisplayAboutPPL" />
+        <activity android:name=".DisplayPPLInter" />
+        <activity android:name=".DisplayLegsA"></activity>
     </application>
 
 </manifest>

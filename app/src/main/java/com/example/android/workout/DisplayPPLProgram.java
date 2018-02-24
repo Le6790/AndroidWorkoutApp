@@ -1,5 +1,6 @@
 package com.example.android.workout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,9 @@ import android.widget.Button;
 public class DisplayPPLProgram extends AppCompatActivity {
 
     Button aboutPPLBut;
+    Button intermediateProgram;
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +24,17 @@ public class DisplayPPLProgram extends AppCompatActivity {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
                 openAboutPPL(v);
-                //workoutSchedule.setText("AfterClick");
+
+
+            }
+        });
+
+        intermediateProgram = (Button)findViewById(R.id.intermediate_program);
+        intermediateProgram.setText("Intermediate Program");
+        intermediateProgram.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                openInterProgram(v);
 
             }
         });
@@ -29,6 +43,10 @@ public class DisplayPPLProgram extends AppCompatActivity {
 
     public final void openAboutPPL(View view){
         Intent intent = new Intent(this,DisplayAboutPPL.class);
+        startActivity(intent);
+    }
+    public final void openInterProgram(View view){
+        Intent intent = new Intent(this,DisplayPPLInter.class);
         startActivity(intent);
     }
 }
