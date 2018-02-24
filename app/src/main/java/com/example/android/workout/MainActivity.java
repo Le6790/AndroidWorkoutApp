@@ -3,36 +3,52 @@ package com.example.android.workout;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    TextView workoutCategories;
+
+    Button workoutSchedule;
+    Button aboutBut;
     //TODO Instead of creating a textview of workout categories, create several buttons that will link to textviews
-    public final void openWorkout1(View view){
-        Intent intent = new Intent (this, DisplayWorkout2.class);
+
+    public final void openWorkoutCategories(View view){
+        Intent intent = new Intent(this, DisplayWorkoutCategories.class);
         startActivity(intent);
     }
+
+    public final void openAbout(View view){
+        Intent intent = new Intent(this,DisplayAbout.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        workoutCategories = (TextView) findViewById(R.id.workout_categories);
 
-        String[] workoutCats = WorkoutCategories.getWorkoutCategories();
+        workoutSchedule = (Button)findViewById(R.id.workout_Schedule_Button);
+        aboutBut = (Button)findViewById(R.id.about_me);
 
-        for (String cat : workoutCats){
-            workoutCategories.append(cat + "\n \n \n");
-        }
 
-        workoutCategories.setOnClickListener(new View.OnClickListener() {
-
-            @Override
+        workoutSchedule.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                openWorkout1(v);
+                // Code here executes on main thread after user presses button
+                openWorkoutCategories(v);
+                //workoutSchedule.setText("AfterClick");
+
             }
         });
+        aboutBut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                openAbout(v);
+            }
+        });
+
+
+
 
 
     }

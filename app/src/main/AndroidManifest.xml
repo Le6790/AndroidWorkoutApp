@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayWorkout2"></activity>
+        <activity android:name=".DisplayWorkout2" />
+        <activity android:name=".DisplayWorkoutCategories" />
+        <activity android:name=".DisplayPPLProgram" />
+        <activity android:name=".DisplayAbout" />
+        <activity android:name=".DisplayAboutPPL"></activity>
     </application>
 
 </manifest>
