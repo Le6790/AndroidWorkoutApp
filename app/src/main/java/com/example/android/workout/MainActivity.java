@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView workoutCategories;
+    //TODO Instead of creating a textview of workout categories, create several buttons that will link to textviews
     public final void openWorkout1(View view){
         Intent intent = new Intent (this, DisplayWorkout2.class);
         startActivity(intent);
