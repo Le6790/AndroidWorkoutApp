@@ -25,6 +25,7 @@ public class DisplayLegsA extends AppCompatActivity {
 
         tableLayout = (TableLayout)findViewById(R.id.tablelayout);
 
+        //Input from a text file containing exercise program
         String workoutExercises = "";
         try {
             InputStream in = getAssets().open("legExercises.txt");
@@ -38,12 +39,9 @@ public class DisplayLegsA extends AppCompatActivity {
             ex.printStackTrace();
         }
 
-        //System.out.println(workoutExercises);
-
+        // Added each workout and it's stuff to an array
         String[] strArray = workoutExercises.split("[,\\n]+");
-//        for (int i =0; i < strArray.length; i++){
-//            System.out.println(strArray[i]);
-//        }
+
         String exercise = "";
         String sets = "";
         String reps = "";
@@ -79,7 +77,7 @@ public class DisplayLegsA extends AppCompatActivity {
 
         tableStuff(legsArray);
     }
-
+    //Add exercise items to the table
     public void tableStuff(ArrayList<PPLExercises> legsArray){
         PPLExercises legs;
         for (int i = 0; i < legsArray.size(); i++) {
@@ -93,7 +91,7 @@ public class DisplayLegsA extends AppCompatActivity {
             TextView setsText;
             TextView repsText;
             TextView restText;
-            int textSize = 20;
+            int textSize = 18;
             int leftRightPadding = 15;
             String rowText = String.format("%30s %10s %10s %10s ", exercise, sets, reps, rest);
 

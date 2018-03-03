@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Pulls up workout schedule
         workoutSchedule = (Button)findViewById(R.id.workout_Schedule_Button);
+        //Pulls up about me page TODO add to about_me
         aboutBut = (Button)findViewById(R.id.about_me);
 
 

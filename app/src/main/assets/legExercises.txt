@@ -1,4 +1,9 @@
 Exercise, Sets, Reps, Rest
 Back squats, 5, 8, 60
-Good Mornings, 3, 12, 60
+Romanian Deadlifts, 5, 5, 60
+Leg Press, 3, 6-8, 60
+Weighted Lunges, 3, 8, 60
+Calf Raises, 5, 10, 60
+
+
 
